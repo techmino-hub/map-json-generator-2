@@ -1,0 +1,263 @@
+[
+    {
+        "name": "stack_v1_20l",
+        "x": -1400,
+        "y": 0,
+        "size": 40,
+        "shape": 1,
+        "icon": "mess",
+        "unlock": ["stack_v1_40l"]
+    },
+    {
+        "name": "stack_v1_40l",
+        "x": -1250,
+        "y": 0,
+        "size": 40,
+        "shape": 1,
+        "icon": "mess",
+        "unlock": ["stack_v1_100l"]
+    },
+    {
+        "name": "stack_v1_100l",
+        "x": -1100,
+        "y": 0,
+        "size": 40,
+        "shape": 1,
+        "icon": "mess",
+        "unlock": []
+    },
+    {
+        "name": "stack_v2_e",
+        "x": -1400,
+        "y": 150,
+        "size": 40,
+        "shape": 1,
+        "icon": "mess",
+        "unlock": ["stack_v2_h"]
+    },
+    {
+        "name": "stack_v2_h",
+        "x": -1250,
+        "y": 150,
+        "size": 40,
+        "shape": 3,
+        "icon": "mess",
+        "unlock": ["stack_v2_u"]
+    },
+    {
+        "name": "stack_v2_u",
+        "x": -1100,
+        "y": 150,
+        "size": 40,
+        "shape": 2,
+        "icon": "mess",
+        "unlock": []
+    },
+    {
+        "name": "stack_v3_e",
+        "x": -1400,
+        "y": 300,
+        "size": 40,
+        "shape": 1,
+        "icon": "mess",
+        "unlock": ["stack_v3_h"]
+    },
+    {
+        "name": "stack_v3_h",
+        "x": -1250,
+        "y": 300,
+        "size": 40,
+        "shape": 3,
+        "icon": "mess",
+        "unlock": ["stack_v3_u"]
+    },
+    {
+        "name": "stack_v3_u",
+        "x": -1100,
+        "y": 300,
+        "size": 40,
+        "shape": 2,
+        "icon": "mess",
+        "unlock": []
+    },
+    {
+        "name": "stack_v4_e",
+        "x": -1400,
+        "y": 450,
+        "size": 40,
+        "shape": 1,
+        "icon": "mess",
+        "unlock": ["stack_v4_u"]
+    },
+    {
+        "name": "stack_v4_u",
+        "x": -1100,
+        "y": 450,
+        "size": 40,
+        "shape": 3,
+        "icon": "mess",
+        "unlock": []
+    },
+    {
+        "name": "stack_e",
+        "x": -1400,
+        "y": 600,
+        "size": 40,
+        "shape": 1,
+        "icon": "mess",
+        "unlock": ["stack_u"]
+    },
+    {
+        "name": "stack_u",
+        "x": -1100,
+        "y": 600,
+        "size": 40,
+        "shape": 3,
+        "icon": "mess",
+        "unlock": []
+    },
+    {
+        "name": "rhythm_e",
+        "x": -900,
+        "y": 0,
+        "size": 40,
+        "shape": 1,
+        "icon": "rhythm",
+        "unlock": ["rhythm_h"]
+    },
+    {
+        "name": "rhythm_h",
+        "x": -750,
+        "y": 0,
+        "size": 40,
+        "shape": 3,
+        "icon": "rhythm",
+        "unlock": ["rhythm_u"]
+    },
+    {
+        "name": "rhythm_u",
+        "x": -600,
+        "y": 0,
+        "size": 40,
+        "shape": 2,
+        "icon": "rhythm",
+        "unlock": []
+    },
+    {
+        "name": "tech_finesse_lock",
+        "x": -400,
+        "y": 0,
+        "size": 40,
+        "shape": 1,
+        "icon": "tech",
+        "unlock": ["tech_finesse_lock_plus"]
+    },
+    {
+        "name": "tech_finesse_lock_plus",
+        "x": -250,
+        "y": 0,
+        "size": 40,
+        "shape": 3,
+        "icon": "tech_plus",
+        "unlock": []
+    },
+    {
+        "name": "techrash_n",
+        "x": -50,
+        "y": 0,
+        "size": 40,
+        "shape": 3,
+        "icon": "drought",
+        "unlock": ["techrash_u"]
+    },
+    {
+        "name": "techrash_u",
+        "x": 100,
+        "y": 0,
+        "size": 40,
+        "shape": 2,
+        "icon": "drought",
+        "unlock": []
+    },
+    {
+        "name": "marathon_bfmax",
+        "x": 500,
+        "y": 0,
+        "size": 40,
+        "shape": 1,
+        "icon": "marathon",
+        "unlock": []
+    },
+    {
+        "name": "classic_n",
+        "x": 700,
+        "y": 0,
+        "size": 40,
+        "shape": 1,
+        "icon": "classic",
+        "unlock": []
+    },
+    {
+        "name": "sprintLock",
+        "x": 900,
+        "y": 0,
+        "size": 40,
+        "shape": 3,
+        "icon": "sprint1",
+        "unlock": []
+    },
+    {
+        "name": "sprintSym",
+        "x": 1100,
+        "y": 0,
+        "size": 40,
+        "shape": 2,
+        "icon": "sprint1",
+        "unlock": []
+    },
+    {
+        "name": "sprintFix",
+        "x": 900,
+        "y": 150,
+        "size": 40,
+        "shape": 3,
+        "icon": "sprint1",
+        "unlock": []
+    },
+    {
+        "name": "sprintMD",
+        "x": 1100,
+        "y": 150,
+        "size": 40,
+        "shape": 2,
+        "icon": "sprint1",
+        "unlock": []
+    },
+    {
+        "name": "sprintSmooth",
+        "x": 900,
+        "y": 300,
+        "size": 40,
+        "shape": 3,
+        "icon": "sprint1",
+        "unlock": []
+    },
+    {
+        "name": "master_death",
+        "x": 900,
+        "y": 600,
+        "size": 40,
+        "shape": 3,
+        "icon": "master",
+        "unlock": ["master_phantom"]
+    },
+    {
+        "name": "master_phantom",
+        "x": 1100,
+        "y": 600,
+        "size": 40,
+        "shape": 2,
+        "icon": "master",
+        "unlock": []
+    }
+]

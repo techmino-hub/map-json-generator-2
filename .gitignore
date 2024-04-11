@@ -1,0 +1,6 @@
+# Cargo
+/target
+
+# Output and intermediate files
+map.json
+modes.lua
