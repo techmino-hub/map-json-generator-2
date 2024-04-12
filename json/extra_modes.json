@@ -6,7 +6,8 @@
         "size": 40,
         "shape": 1,
         "icon": "mess",
-        "unlock": ["stack_v1_40l"]
+        "unlock": ["stack_v1_40l"],
+        "source": "https://github.com/26F-Studio/Techmino/blob/v0.16.0/parts/modes/stack_20l.lua"
     },
     {
         "name": "stack_v1_40l",
@@ -15,7 +16,8 @@
         "size": 40,
         "shape": 1,
         "icon": "mess",
-        "unlock": ["stack_v1_100l"]
+        "unlock": ["stack_v1_100l"],
+        "source": "https://github.com/26F-Studio/Techmino/blob/v0.16.0/parts/modes/stack_40l.lua"
     },
     {
         "name": "stack_v1_100l",
@@ -24,7 +26,8 @@
         "size": 40,
         "shape": 1,
         "icon": "mess",
-        "unlock": []
+        "unlock": [],
+        "source": "https://github.com/26F-Studio/Techmino/blob/v0.16.0/parts/modes/stack_100l.lua"
     },
     {
         "name": "stack_v2_e",
@@ -33,7 +36,8 @@
         "size": 40,
         "shape": 1,
         "icon": "mess",
-        "unlock": ["stack_v2_h"]
+        "unlock": ["stack_v2_h"],
+        "source": "https://github.com/26F-Studio/Techmino/blob/v0.16.1/parts/modes/stack_e.lua"
     },
     {
         "name": "stack_v2_h",
@@ -42,7 +46,8 @@
         "size": 40,
         "shape": 3,
         "icon": "mess",
-        "unlock": ["stack_v2_u"]
+        "unlock": ["stack_v2_u"],
+        "source": "https://github.com/26F-Studio/Techmino/blob/v0.16.1/parts/modes/stack_h.lua"
     },
     {
         "name": "stack_v2_u",
@@ -51,7 +56,8 @@
         "size": 40,
         "shape": 2,
         "icon": "mess",
-        "unlock": []
+        "unlock": [],
+        "source": "https://github.com/26F-Studio/Techmino/blob/v0.16.1/parts/modes/stack_u.lua"
     },
     {
         "name": "stack_v3_e",
@@ -60,7 +66,8 @@
         "size": 40,
         "shape": 1,
         "icon": "mess",
-        "unlock": ["stack_v3_h"]
+        "unlock": ["stack_v3_h"],
+        "source": "https://github.com/26F-Studio/Techmino/blob/v0.16.4/parts/modes/stack_e.lua"
     },
     {
         "name": "stack_v3_h",
@@ -69,7 +76,8 @@
         "size": 40,
         "shape": 3,
         "icon": "mess",
-        "unlock": ["stack_v3_u"]
+        "unlock": ["stack_v3_u"],
+        "source": "https://github.com/26F-Studio/Techmino/blob/v0.16.4/parts/modes/stack_h.lua"
     },
     {
         "name": "stack_v3_u",
@@ -78,7 +86,8 @@
         "size": 40,
         "shape": 2,
         "icon": "mess",
-        "unlock": []
+        "unlock": [],
+        "source": "https://github.com/26F-Studio/Techmino/blob/v0.16.4/parts/modes/stack_u.lua"
     },
     {
         "name": "stack_v4_e",
@@ -87,7 +96,8 @@
         "size": 40,
         "shape": 1,
         "icon": "mess",
-        "unlock": ["stack_v4_u"]
+        "unlock": ["stack_v4_u"],
+        "source": "https://github.com/26F-Studio/Techmino/blob/v0.17.4/parts/modes/stack_e.lua"
     },
     {
         "name": "stack_v4_u",
@@ -96,7 +106,8 @@
         "size": 40,
         "shape": 3,
         "icon": "mess",
-        "unlock": []
+        "unlock": [],
+        "source": "https://github.com/26F-Studio/Techmino/blob/v0.17.4/parts/modes/stack_u.lua"
     },
     {
         "name": "stack_e",
@@ -105,7 +116,8 @@
         "size": 40,
         "shape": 1,
         "icon": "mess",
-        "unlock": ["stack_u"]
+        "unlock": ["stack_u"],
+        "source": "https://github.com/26F-Studio/Techmino/blob/main/parts/modes/stack_e.lua"
     },
     {
         "name": "stack_u",
@@ -114,7 +126,8 @@
         "size": 40,
         "shape": 3,
         "icon": "mess",
-        "unlock": []
+        "unlock": [],
+        "source": "https://github.com/26F-Studio/Techmino/blob/main/parts/modes/stack_e.lua"
     },
     {
         "name": "rhythm_e",
@@ -123,7 +136,8 @@
         "size": 40,
         "shape": 1,
         "icon": "rhythm",
-        "unlock": ["rhythm_h"]
+        "unlock": ["rhythm_h"],
+        "source": "https://github.com/26F-Studio/Techmino/blob/v0.16.4/parts/modes/rhythm_e.lua"
     },
     {
         "name": "rhythm_h",
@@ -132,7 +146,8 @@
         "size": 40,
         "shape": 3,
         "icon": "rhythm",
-        "unlock": ["rhythm_u"]
+        "unlock": ["rhythm_u"],
+        "source": "https://github.com/26F-Studio/Techmino/blob/v0.16.4/parts/modes/rhythm_h.lua"
     },
     {
         "name": "rhythm_u",
@@ -141,7 +156,8 @@
         "size": 40,
         "shape": 2,
         "icon": "rhythm",
-        "unlock": []
+        "unlock": [],
+        "source": "https://github.com/26F-Studio/Techmino/blob/v0.16.4/parts/modes/rhythm_u.lua"
     },
     {
         "name": "tech_finesse_lock",
@@ -150,7 +166,8 @@
         "size": 40,
         "shape": 1,
         "icon": "tech",
-        "unlock": ["tech_finesse_lock_plus"]
+        "unlock": ["tech_finesse_lock_plus"],
+        "source": "https://github.com/26F-Studio/Techmino/blob/v0.17.15/parts/modes/tech_finesse_lock.lua"
     },
     {
         "name": "tech_finesse_lock_plus",
@@ -159,7 +176,8 @@
         "size": 40,
         "shape": 3,
         "icon": "tech_plus",
-        "unlock": []
+        "unlock": [],
+        "source": "https://github.com/26F-Studio/Techmino/blob/v0.17.15/parts/modes/tech_finesse_lock_f.lua"
     },
     {
         "name": "techrash_n",
@@ -168,7 +186,8 @@
         "size": 40,
         "shape": 3,
         "icon": "drought",
-        "unlock": ["techrash_u"]
+        "unlock": ["techrash_u"],
+        "source": "https://github.com/26F-Studio/Techmino/blob/main/parts/modes/techrash_n.lua"
     },
     {
         "name": "techrash_u",
@@ -177,7 +196,8 @@
         "size": 40,
         "shape": 2,
         "icon": "drought",
-        "unlock": []
+        "unlock": [],
+        "source": "https://github.com/26F-Studio/Techmino/blob/main/parts/modes/techrash_u.lua"
     },
     {
         "name": "marathon_bfmax",
@@ -186,7 +206,8 @@
         "size": 40,
         "shape": 1,
         "icon": "marathon",
-        "unlock": []
+        "unlock": [],
+        "source": "https://github.com/26F-Studio/Techmino/blob/main/parts/modes/marathon_bfmax.lua"
     },
     {
         "name": "classic_n",
@@ -195,7 +216,8 @@
         "size": 40,
         "shape": 1,
         "icon": "classic",
-        "unlock": []
+        "unlock": [],
+        "source": "https://github.com/26F-Studio/Techmino/blob/30ed4179d68266e307c5a7d3a1e65ee8a2c612f2/parts/modes/classic_n.lua"
     },
     {
         "name": "sprintLock",
@@ -204,7 +226,8 @@
         "size": 40,
         "shape": 3,
         "icon": "sprint1",
-        "unlock": []
+        "unlock": [],
+        "source": "https://github.com/26F-Studio/Techmino/blob/main/parts/modes/sprintLock.lua"
     },
     {
         "name": "sprintSym",
@@ -213,7 +236,8 @@
         "size": 40,
         "shape": 2,
         "icon": "sprint1",
-        "unlock": []
+        "unlock": [],
+        "source": "https://github.com/26F-Studio/Techmino/blob/main/parts/modes/sprintSym.lua"
     },
     {
         "name": "sprintFix",
@@ -222,7 +246,8 @@
         "size": 40,
         "shape": 3,
         "icon": "sprint1",
-        "unlock": []
+        "unlock": [],
+        "source": "https://github.com/26F-Studio/Techmino/blob/main/parts/modes/sprintFix.lua"
     },
     {
         "name": "sprintMD",
@@ -231,7 +256,8 @@
         "size": 40,
         "shape": 2,
         "icon": "sprint1",
-        "unlock": []
+        "unlock": [],
+        "source": "https://github.com/26F-Studio/Techmino/blob/main/parts/modes/sprintMD.lua"
     },
     {
         "name": "sprintSmooth",
@@ -240,7 +266,8 @@
         "size": 40,
         "shape": 3,
         "icon": "sprint1",
-        "unlock": []
+        "unlock": [],
+        "source": "https://github.com/26F-Studio/Techmino/blob/main/parts/modes/sprintSmooth.lua"
     },
     {
         "name": "master_death",
@@ -249,7 +276,8 @@
         "size": 40,
         "shape": 3,
         "icon": "master",
-        "unlock": ["master_phantom"]
+        "unlock": ["master_phantom"],
+        "source": "https://github.com/Another-Soul/Techmino-Unofficial-Expansion/blob/main/parts/modes/master_death.lua"
     },
     {
         "name": "master_phantom",
@@ -258,6 +286,7 @@
         "size": 40,
         "shape": 2,
         "icon": "master",
-        "unlock": []
+        "unlock": [],
+        "source": "https://github.com/Another-Soul/Techmino-Unofficial-Expansion/blob/main/parts/modes/master_phantom.lua"
     }
 ]

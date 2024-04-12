@@ -20,7 +20,7 @@ Reasons can include:
 Note that the Y coordinate aren't the same as the Y coordinates on the normal map; they are shifted down 200 units under the bottommost "non-extra" mode.
 
 ## Output Format
-The output will be generated in `./modes.json` by default. The output will be a minified JSON containing an object.  
+The output will be generated in `./json/map.json` by default. The output will be a minified JSON containing an object.  
 Here's a non-minified JSON for reference:
 ```json
 {
@@ -32,7 +32,8 @@ Here's a non-minified JSON for reference:
             "size": 40,
             "x": 0,
             "y": 0,
-            "icon": "sprint1"
+            "icon": "sprint1",
+            "source": "https://github.com/26F-Studio/Techmino/tree/main/parts/modes/sprint_10l.lua"
         },
         "sprint_20l": {
             "name": "sprint_20l",
@@ -41,7 +42,8 @@ Here's a non-minified JSON for reference:
             "size": 50,
             "x": -200,
             "y": 200,
-            "icon": "sprint1"
+            "icon": "sprint1",
+            "source": "https://github.com/26F-Studio/Techmino/tree/main/parts/modes/sprint_20l.lua"
         }
     },
     "starting_mode": "sprint_10l",

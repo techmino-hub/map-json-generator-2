@@ -8,7 +8,6 @@ use std::error::Error;
 use std::io::{self, Write};
 
 use json::object;
-use json::object::Object;
 use json::JsonValue;
 
 use reqwest::blocking::get;
@@ -59,6 +58,57 @@ fn main() {
     };
 
     map["modes"] = get_base_modes_json();
+    
+    {
+        let extra_modes = get_extra_modes_json();
+        
+        for mode in extra_modes.members() {
+            let key = mode["name"].as_str().expect("Invalid name value in extra modes JSON");
+
+            map["modes"].insert(key, mode.clone())
+                .expect("Error while merging extra modes and base modes");
+        }
+    }
+
+    {
+        let modes = &map["modes"];
+        let mut min_x: f64 = std::f64::INFINITY;
+        let mut max_x: f64 = std::f64::NEG_INFINITY;
+        let mut min_y: f64 = std::f64::INFINITY;
+        let mut max_y: f64 = std::f64::NEG_INFINITY;
+
+        const PADDING: f64 = 30.0;
+
+        for (_, mode) in modes.entries() {
+            let x = mode["x"].as_f64().unwrap();
+            let y = mode["y"].as_f64().unwrap();
+            let r = mode["size"].as_f64().unwrap();
+
+            min_x = x - r; max_x = x + r;
+            min_y = y - r; max_y = y + r;
+        }
+
+        map["min_x"] = (min_x - PADDING).into();
+        map["max_x"] = (max_x + PADDING).into();
+        map["min_y"] = (min_y - PADDING).into();
+        map["max_y"] = (max_y + PADDING).into();
+    }
+
+    let output_path = Path::new(OUTPUT_STRPATH);
+    loop {
+        let result = fs::write(output_path, map.dump());
+        if let Err(e) = result {
+            println!("Failed to write JSON to {}: {e}", output_path.display());
+            if ask_for_confirmation("Would you like to retry writing to the file? [Y/N]: ") {
+                continue;
+            } else {
+                panic!("Failed to write JSON to {}: {e}", output_path.display());
+            }
+        }
+        break;
+    }
+
+    println!("Written JSON file to {}", output_path.display());
 }
 
 fn check_dependencies() {
@@ -96,6 +146,24 @@ fn get_base_modes_json() -> JsonValue {
         .expect("Error while converting Vec<u8> to String while processing modes.lua");
 
     return json::parse(json_str).expect("Error while parsing base JSON");
+}
+
+fn get_extra_modes_json() -> JsonValue {
+    let extra_modes_path = Path::new(EXTRA_MODES_STRPATH);
+    if !extra_modes_path.exists() {
+        return JsonValue::new_object();
+    }
+
+    let extra_modes = fs::read(extra_modes_path)
+        .expect("Could not read extra_modes.json");
+
+    let extra_modes = std::str::from_utf8(&extra_modes)
+        .expect("Could not parse extra_modes.json into &str");
+
+    let extra_modes = json::parse(extra_modes)
+        .expect("Could not parse extra_modes.json into JSON object");
+
+    return extra_modes;
 }
 
 fn ask_for_confirmation(question: &str) -> bool {
