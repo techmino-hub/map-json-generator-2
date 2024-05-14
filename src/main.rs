@@ -26,7 +26,8 @@ fn main() {
 
         if Path::new(MODES_LUA_STRPATH).exists() {
             download_modes_lua = ask_for_confirmation(
-                "modes.lua already exists. Would you like to redownload/update it? [Y/N]: "
+                "modes.lua already exists. Would you like to redownload/update it? [Y/N]: ",
+                true
             );
         }
 
@@ -35,7 +36,7 @@ fn main() {
                 let result = download_modes_lua_file();
                 if let Err(e) = result {
                     println!("Error downloading modes.lua: {e}");
-                    if ask_for_confirmation("Would you like to retry downloading it? [Y/N]: ") {
+                    if ask_for_confirmation("Would you like to retry downloading it? [Y/N]: ", false) {
                         continue;
                     }
                 } else {
@@ -99,7 +100,7 @@ fn main() {
         let result = fs::write(output_path, map.dump());
         if let Err(e) = result {
             println!("Failed to write JSON to {}: {e}", output_path.display());
-            if ask_for_confirmation("Would you like to retry writing to the file? [Y/N]: ") {
+            if ask_for_confirmation("Would you like to retry writing to the file? [Y/N]: ", false) {
                 continue;
             } else {
                 panic!("Failed to write JSON to {}: {e}", output_path.display());
@@ -166,7 +167,10 @@ fn get_extra_modes_json() -> JsonValue {
     return extra_modes;
 }
 
-fn ask_for_confirmation(question: &str) -> bool {
+fn ask_for_confirmation(question: &str, default: bool) -> bool {
+    if is_auto_mode() {
+        return default;
+    }
     loop {
         print!("{question}");
         io::stdout().flush().expect("Failed to flush stdout");
@@ -185,4 +189,8 @@ fn ask_for_confirmation(question: &str) -> bool {
             _ => { continue; }
         }
     }
+}
+
+fn is_auto_mode() -> bool {
+    return std::env::args().collect::<String>().contains(&"--auto".to_string());
 }
