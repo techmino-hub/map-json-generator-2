@@ -11,10 +11,25 @@ env:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
-    - name: Build
-      run: cargo build --verbose
+
+    - name: Linux build
+      run: cargo b -rv
+    - name: Upload Linux artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: map-json-generator-2-linux
+        path: target/release/map-json-generator-2
+
+    - name: Add Windows target
+      run: rustup target add x86_64-pc-windows-gnu
+    - name: Windows build
+      run: cargo b -rv --target x86_64-pc-windows-gnu
+    - name: Upload Windows artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: map-json-generator-2-windows
+        path: target/x86_64-pc-windows-gnu/release/map-json-generator-2.exe
