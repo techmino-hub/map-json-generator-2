@@ -4,8 +4,8 @@ This repo contains the code to generate a map.json file for [Techmino Hub](https
 The main reason I rewrote this in Rust is because fiddling around with Node.js was a pain and it just never seemed to easily work. Rust should be more reliable and cross-platform.
 
 ## Dependencies
-- [`Lua`](https://www.lua.org/download.html)
-- [`Cargo`](https://rustup.rs/)
+- Lua: https://www.lua.org/download.html
+- Rust/Cargo: https://rustup.rs/
 
 ## Running
 After installing the dependencies, run `cargo run -r` in the root directory of this repo to generate the map.json file.
