@@ -62,18 +62,19 @@ fn main() {
     
     {
         let modes = &map["modes"];
-        let mut max_y: f64 = std::f64::NEG_INFINITY;
+        let mut offset: f64 = std::f64::NEG_INFINITY;
         for mode in modes.members() {
             let y = mode["y"].as_f64().unwrap();
-            max_y = max_y.max(y);
+            offset = offset.max(y);
         }
+        offset = offset + 200.0;
 
         let extra_modes = get_extra_modes_json();
         
         for mode in extra_modes.members() {
             let mut mode = mode.clone();
             
-            mode["y"] = (max_y + 200.0 + mode["y"].as_f64().unwrap()).into();
+            mode["y"] = (offset + mode["y"].as_f64().unwrap()).into();
             
             let key = mode["name"].as_str().expect("Invalid name value in extra modes JSON");
 
