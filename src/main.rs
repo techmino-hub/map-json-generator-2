@@ -63,11 +63,11 @@ fn main() {
     {
         let modes = &map["modes"];
         let mut offset: f64 = std::f64::NEG_INFINITY;
-        for mode in modes.members() {
+        for (_, mode) in modes.entries() {
             let y = mode["y"].as_f64().unwrap();
             offset = offset.max(y);
         }
-        offset = offset + 200.0;
+        offset += 200.0;
 
         let extra_modes = get_extra_modes_json();
         
@@ -92,7 +92,7 @@ fn main() {
 
         const PADDING: f64 = 30.0;
 
-        for mode in modes.members() {
+        for (_, mode) in modes.entries() {
             let x = mode["x"].as_f64().unwrap();
             let y = mode["y"].as_f64().unwrap();
             let r = mode["size"].as_f64().unwrap();
