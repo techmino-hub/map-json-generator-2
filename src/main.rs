@@ -73,7 +73,7 @@ fn main() {
         for mut mode in extra_modes.members() {
             let key = mode["name"].as_str().expect("Invalid name value in extra modes JSON");
 
-            mode["y"] = (max_y + 200.0 + mode["y"]).into();
+            mode["y"] = (max_y + 200.0 + mode["y"].as_f64().unwrap()).into();
 
             map["modes"].insert(key, mode.clone())
                 .expect("Error while merging extra modes and base modes");
