@@ -61,10 +61,18 @@ fn main() {
     map["modes"] = get_base_modes_json();
     
     {
+        let mut max_y: f64 = std::f64::NEG_INFINITY;
+        for mode in modes.members() {
+            let y = mode["y"].as_f64().unwrap();
+            max_y = max_y.max(y);
+        }
+
         let extra_modes = get_extra_modes_json();
         
-        for mode in extra_modes.members() {
+        for mut mode in extra_modes.members() {
             let key = mode["name"].as_str().expect("Invalid name value in extra modes JSON");
+
+            mode["y"] = (max_y + 200.0 + mode["y"]).into();
 
             map["modes"].insert(key, mode.clone())
                 .expect("Error while merging extra modes and base modes");
@@ -80,7 +88,7 @@ fn main() {
 
         const PADDING: f64 = 30.0;
 
-        for (_, mode) in modes.entries() {
+        for mode in modes.members() {
             let x = mode["x"].as_f64().unwrap();
             let y = mode["y"].as_f64().unwrap();
             let r = mode["size"].as_f64().unwrap();
