@@ -70,7 +70,9 @@ fn main() {
 
         let extra_modes = get_extra_modes_json();
         
-        for mut mode in extra_modes.members_mut() {
+        for mode in extra_modes.members() {
+            let mut mode = mode.clone();
+            
             let key = mode["name"].as_str().expect("Invalid name value in extra modes JSON");
 
             mode["y"] = (max_y + 200.0 + mode["y"].as_f64().unwrap()).into();
