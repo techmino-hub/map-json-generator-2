@@ -62,7 +62,7 @@ fn main() {
     
     {
         let mut max_y: f64 = std::f64::NEG_INFINITY;
-        for mode in modes.members() {
+        for mode in &map["modes"].members() {
             let y = mode["y"].as_f64().unwrap();
             max_y = max_y.max(y);
         }
