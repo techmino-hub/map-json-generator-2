@@ -1,6 +1,7 @@
 extern crate json;
 extern crate reqwest;
 
+use std::cmp::{min, max};
 use std::process::Command;
 use std::fs;
 use std::path::Path;
@@ -85,8 +86,10 @@ fn main() {
             let y = mode["y"].as_f64().unwrap();
             let r = mode["size"].as_f64().unwrap();
 
-            min_x = x - r; max_x = x + r;
-            min_y = y - r; max_y = y + r;
+            min_x = min(min_x, x - r);
+            max_x = max(max_x, x + r);
+            min_y = min(min_y, y - r);
+            max_y = max(max_y, y + r);
         }
 
         map["min_x"] = (min_x - PADDING).into();
