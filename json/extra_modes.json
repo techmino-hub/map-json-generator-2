@@ -170,7 +170,7 @@
         "source": "https://github.com/26F-Studio/Techmino/blob/v0.17.15/parts/modes/tech_finesse_lock.lua"
     },
     {
-        "name": "tech_finesse_lock_plus",
+        "name": "tech_finesse_lock_f",
         "x": -250,
         "y": 0,
         "size": 40,

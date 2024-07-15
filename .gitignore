@@ -4,3 +4,6 @@
 # Output and intermediate files
 map.json
 modes.lua
+
+# Visual Studio Code
+.vscode
