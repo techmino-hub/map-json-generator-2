@@ -166,7 +166,7 @@
         "size": 40,
         "shape": 1,
         "icon": "tech",
-        "unlock": ["tech_finesse_lock_plus"],
+        "unlock": ["tech_finesse_lock_f"],
         "source": "https://github.com/26F-Studio/Techmino/blob/v0.17.15/parts/modes/tech_finesse_lock.lua"
     },
     {
