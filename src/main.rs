@@ -12,13 +12,15 @@ use json::JsonValue;
 
 use reqwest::blocking::get;
 
+mod check;
+
 const OUTPUT_STRPATH: &str = "./json/map.json";
 const MODES_URL: &str = "https://raw.githubusercontent.com/26F-Studio/Techmino/main/parts/modes.lua";
 const MODES_LUA_STRPATH: &str = "./lua/modes.lua";
 const TABLE_TO_JSON_STRPATH: &str = "./lua/table_to_json.lua";
 const EXTRA_MODES_STRPATH: &str = "./json/extra_modes.json";
 
-fn main() {
+fn main() -> Result<(), usize> {
     check_dependencies();
 
     {
@@ -124,6 +126,20 @@ fn main() {
     }
 
     println!("Written JSON file to {}", output_path.display());
+
+    let warnings = check::perform_checks();
+
+    if warnings.is_empty() {
+        println!("Checks passed successfully");
+    } else {
+        eprintln!("WARNING: Some sanity checks failed:");
+        for warning in warnings.iter() {
+            eprintln!("{warning}");
+        }
+        return Err(warnings.len());
+    }
+
+    return Ok(());
 }
 
 fn check_dependencies() {
